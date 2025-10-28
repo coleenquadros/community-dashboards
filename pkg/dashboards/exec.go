@@ -115,7 +115,7 @@ func (b *Exec) BuildDashboard(dr DashboardResult) {
 }
 
 // BuildDashboardOperatorResource is a helper to return the operator resource of a dashboard builder as a runtime.Object.
-func (b *Exec) BuildDashboardOperatorResource(dr DashboardResult) runtime.Object {
+func BuildDashboardOperatorResource(dr DashboardResult) runtime.Object {
 	if dr.err != nil {
 		fmt.Fprint(os.Stderr, dr.err)
 		os.Exit(-1)

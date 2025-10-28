@@ -52,7 +52,7 @@ func (w *DashboardWriter) Write() {
 func (w *DashboardWriter) OperatorResources() []runtime.Object {
 	operatorResources := []runtime.Object{}
 	for _, result := range w.dashboardResults {
-		operatorResources = append(operatorResources, w.executor.BuildDashboardOperatorResource(result))
+		operatorResources = append(operatorResources, BuildDashboardOperatorResource(result))
 	}
 	return operatorResources
 }
